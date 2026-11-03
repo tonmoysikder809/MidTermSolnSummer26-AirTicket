@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="509.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.midtermsolnsummer26sec4_airticket.AirTicketViewController">
+   <children>
+      <TextField fx:id="flightNoTextField" layoutX="88.0" layoutY="14.0" />
+      <Text layoutX="20.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flight No:" />
+      <TextField fx:id="pnrTextField" layoutX="88.0" layoutY="46.0" />
+      <Text layoutX="20.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PNR:" />
+      <TextField fx:id="flightTimeTextField" layoutX="88.0" layoutY="78.0" />
+      <Text layoutX="20.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flight Time:" />
+      <ComboBox fx:id="originCodeComboBox" layoutX="407.0" layoutY="14.0" prefWidth="150.0" />
+      <Text layoutX="314.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Orgin Code:" />
+      <ComboBox fx:id="destinationCodeComboBox" layoutX="407.0" layoutY="46.0" prefWidth="150.0" />
+      <Text layoutX="314.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destination Code:" />
+      <ComboBox fx:id="seatTypeComboBox" layoutX="407.0" layoutY="78.0" prefWidth="150.0" />
+      <Text layoutX="314.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seat Type:" />
+      <TextField fx:id="priceTextField" layoutX="88.0" layoutY="111.0" />
+      <Text layoutX="20.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+      <CheckBox fx:id="isRefundableCheckBox" layoutX="251.0" layoutY="115.0" mnemonicParsing="false" text="is Refundable?" />
+      <DatePicker fx:id="travelDateDatePicker" layoutX="383.0" layoutY="111.0" promptText="Travel Date" />
+      <Button layoutX="20.0" layoutY="148.0" mnemonicParsing="false" onAction="#validateAndAddNewObjectToArrayListButtonOnAction" prefHeight="25.0" prefWidth="540.0" text="Validate &amp; Add New Object to ArrayList" />
+      <TableView fx:id="airTicketTableView" layoutX="20.0" layoutY="256.0" prefHeight="200.0" prefWidth="540.0">
+        <columns>
+          <TableColumn fx:id="flightNoTableCol" maxWidth="750.0" minWidth="30.0" prefWidth="75.0" text="Flight No." />
+          <TableColumn fx:id="pnrTableCol" maxWidth="750.0" minWidth="30.0" prefWidth="75.0" text="PNR" />
+            <TableColumn fx:id="originCodeTableCol" maxWidth="1100.0" minWidth="30.0" prefWidth="110.0" text="Origin Code" />
+            <TableColumn fx:id="travelDateTableCol" maxWidth="960.0" minWidth="30.0" prefWidth="96.0" text="Travel Date" />
+            <TableColumn fx:id="priceTableCol" maxWidth="930.0" minWidth="30.0" prefWidth="93.0" text="Price" />
+            <TableColumn fx:id="isRefundableTableCol" maxWidth="900.0" minWidth="30.0" prefWidth="90.0" text="is Refundable" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="filteredOriginCodeComboBox" layoutX="113.0" layoutY="182.0" prefWidth="150.0" />
+      <Text layoutX="20.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Orgin Code:" />
+      <DatePicker fx:id="filteredTravelDateDatePicker" layoutX="383.0" layoutY="182.0" promptText="Travel Date" />
+      <CheckBox fx:id="filteredIsRefundableCheckBox" layoutX="265.0" layoutY="225.0" mnemonicParsing="false" text="is Refundable?" />
+      <Button layoutX="20.0" layoutY="221.0" mnemonicParsing="false" onAction="#filterAndLoadTableButtonOnAction" prefHeight="25.0" prefWidth="232.0" text="Filter &amp; Load Table" />
+      <Button layoutX="20.0" layoutY="462.0" mnemonicParsing="false" onAction="#showSeatTypeCountsButtonOnAction" prefHeight="25.0" prefWidth="158.0" text="Show seatType Counts" />
+      <Label fx:id="showSeatTypeCountsLabel" layoutX="188.0" layoutY="462.0" prefHeight="25.0" prefWidth="372.0" />
+   </children>
+</AnchorPane>
